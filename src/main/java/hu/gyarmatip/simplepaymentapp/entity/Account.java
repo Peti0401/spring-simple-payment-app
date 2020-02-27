@@ -27,8 +27,8 @@ public class Account {
     @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false)
-    private Double balance;
+    @Column(nullable = false, columnDefinition = "double default 200.0")
+    private Double balance = 200.0;
 
     @OneToMany(mappedBy = "senderAccount")
     private Set<Transaction> sentTransactions = new HashSet<>();

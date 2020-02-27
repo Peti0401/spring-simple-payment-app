@@ -4,8 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @Getter
@@ -27,5 +29,9 @@ public class Transaction {
 
     @ManyToOne
     private Account recipientAccount;
+
+    @CreationTimestamp
+    @Column(nullable = false)
+    private LocalDateTime date;
 
 }

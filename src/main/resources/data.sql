@@ -1,11 +1,10 @@
-insert into account (name, email, balance) values ('Clotilda Sarfas', 'csarfas0@mapquest.com', 200);
-insert into account (name, email, balance) values ('Barry Ardern', 'bardern1@nature.com', 200);
-insert into account (name, email, balance) values ('Vanessa Valentinetti', 'vvalentinetti2@google.ru', 200);
-insert into account (name, email, balance) values ('Quinlan Artois', 'qartois3@theglobeandmail.com', 200);
-insert into account (name, email, balance) values ('Nata Eisak', 'neisak4@howstuffworks.com', 200);
-insert into account (name, email, balance) values ('Lacy Krauze', 'lkrauze5@uol.com.br', 200);
-insert into account (name, email, balance) values ('Tabb Dunham', 'tdunham6@shutterfly.com', 200);
-insert into account (name, email, balance) values ('Rosalinda Moorfield', 'rmoorfield7@ed.gov', 200);
-insert into account (name, email, balance) values ('Margette Britzius', 'mbritzius8@usa.gov', 200);
-insert into account (name, email, balance) values ('Boonie Wigfield', 'bwigfield9@drupal.org', 200);
-
+insert into account (name, email) values ('Clotilda Sarfas', 'csarfas0@mapquest.com');
+insert into account (name, email) values ('Barry Ardern', 'bardern1@nature.com');
+insert into account (name, email) values ('Vanessa Valentinetti', 'vvalentinetti2@google.ru');
+insert into account (name, email) values ('Quinlan Artois', 'qartois3@theglobeandmail.com');
+insert into account (name, email) values ('Nata Eisak', 'neisak4@howstuffworks.com');
+insert into account (name, email) values ('Lacy Krauze', 'lkrauze5@uol.com.br');
+insert into account (name, email) values ('Tabb Dunham', 'tdunham6@shutterfly.com');
+insert into account (name, email) values ('Rosalinda Moorfield', 'rmoorfield7@ed.gov');
+insert into account (name, email) values ('Margette Britzius', 'mbritzius8@usa.gov');
+insert into account (name, email) values ('Boonie Wigfield', 'bwigfield9@drupal.org');
