@@ -33,6 +33,6 @@ public interface TransactionService {
      * @throws InsufficientBalanceException if the sender's balance is insufficient (smaller than the sum field of the Transaction object)
      * @throws RuntimeException if the {@literal sum} field of {@literal transactionDto} is a non-positive number
      */
-    void completeTransaction(TransactionDto transactionDto) throws AccountNotFoundException, InsufficientBalanceException;
+    Transaction completeTransaction(TransactionDto transactionDto) throws AccountNotFoundException, InsufficientBalanceException;
 
 }

@@ -1,5 +1,6 @@
 package hu.gyarmatip.simplepaymentapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -30,10 +31,12 @@ public class Account {
     @Column(nullable = false, columnDefinition = "double default 200.0")
     private Double balance = 200.0;
 
-    @OneToMany(mappedBy = "senderAccount")
+    @JsonManagedReference
+    @OneToMany(mappedBy = "senderAccount", targetEntity = Transaction.class)
     private Set<Transaction> sentTransactions = new HashSet<>();
 
-    @OneToMany(mappedBy = "recipientAccount")
+    @JsonManagedReference
+    @OneToMany(mappedBy = "recipientAccount", targetEntity = Transaction.class)
     private Set<Transaction> receivedTransactions = new HashSet<>();
 
 }

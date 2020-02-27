@@ -2,6 +2,7 @@ package hu.gyarmatip.simplepaymentapp.controllers;
 
 import hu.gyarmatip.simplepaymentapp.dto.AccountDto;
 import hu.gyarmatip.simplepaymentapp.entity.Account;
+import hu.gyarmatip.simplepaymentapp.exception.AccountNotFoundException;
 import hu.gyarmatip.simplepaymentapp.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,7 @@ public class AccountController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteById(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteById(@PathVariable Long id) throws AccountNotFoundException {
         accountService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

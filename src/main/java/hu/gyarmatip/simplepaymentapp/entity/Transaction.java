@@ -1,5 +1,6 @@
 package hu.gyarmatip.simplepaymentapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,9 +25,11 @@ public class Transaction {
     @Column(nullable = false)
     private Double sum;
 
+    @JsonBackReference
     @ManyToOne
     private Account senderAccount;
 
+    @JsonBackReference
     @ManyToOne
     private Account recipientAccount;
 

@@ -39,7 +39,7 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
-    public void completeTransaction(TransactionDto transactionDto) throws AccountNotFoundException, InsufficientBalanceException {
+    public Transaction completeTransaction(TransactionDto transactionDto) throws AccountNotFoundException, InsufficientBalanceException {
         if (transactionDto.getSum() <= 0) {
             throw new RuntimeException("Sum of transaction must be greater than 0");
         }
@@ -78,5 +78,7 @@ public class TransactionServiceImpl implements TransactionService {
 
         // update the transacting accounts in the database as well
         accountRepository.saveAll(Arrays.asList(senderAccount, recipientAccount));
+
+        return transaction;
     }
 }
